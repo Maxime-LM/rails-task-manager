@@ -3,7 +3,9 @@
 <ol>
   <% @tasks.each do |task| %>
     <li>
-        <%= task  %>
+        <%= link_to task.title, task_path(task)%>
     </li>
   <% end %>
 </ol>
+
+<div><%= link_to 'new task', new_task_path %></div>
